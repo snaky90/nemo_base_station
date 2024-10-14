@@ -14,6 +14,10 @@ Se debe generar un archivo **.env** que contenga la configuración de las variab
 Se debe incluir el token de influxDB en el archivo de configuración de Telegraf para una correcta conexión.
 
 ### EJECUCIÓN
+¡IMPORTANTE!
+Editar el archivo docker compose con el ID de grupo del usuario docker, ejecutando el comando 
+> getent group | awk -F ":" '{ if($1 == "docker") print $3 }'
+
 Una vez realizadas las configuraciones oportunas, se debe lanzar el compose con el siguiente comando:
 > docker compose up -d  
 
